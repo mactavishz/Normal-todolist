@@ -2,9 +2,10 @@
 body {
     background-color: #f8f8f8;
 }
-
+*{
+     outline: none;
+}
 *:not(input){
-    outline: none;
     moz-user-select: -moz-none;
     -moz-user-select: none;
     -o-user-select: none;
