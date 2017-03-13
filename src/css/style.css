@@ -1,0 +1,243 @@
+/* general style */
+body {
+    background-color: #f8f8f8;
+}
+
+* {
+    outline: none;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* tool style */
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* todo style */
+.todo {
+    width: 500px;
+    margin: 100px auto 40px auto;
+    text-align: center;
+}
+
+/* todo titile */
+.todo-title h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 80px;
+    color: #bebebe;
+    margin-bottom: 0;
+}
+
+/* todo input area */
+.todo-input {
+    margin: 20px auto;
+    width: 100%;
+    position: relative;
+}
+
+#new-todo {
+    width: 100%;
+    height: 50px;
+    border: none;
+    box-shadow: #d6d6d6 0 5px 15px;
+    font-size: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    text-indent: 20px;
+    padding: 0;
+    outline: none;
+}
+
+.clear-input {
+    background: transparent url("../img/delete.svg");
+    width: 32px;
+    height: 32px;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+.clear-input:active {
+    top: 12px;
+}
+
+/* todo display area */
+.todo-display {
+    width: 95%;
+    margin: auto;
+}
+
+.todo-item {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    background-color: white;
+    height: 50px;
+    border-radius: 6px;
+    border-right: #1E90FF 5px solid;
+    transition: border-color .35s, opacity .5s;
+    box-shadow: #d6d6d6 0 5px 15px;
+}
+
+.todo-item:first-child {
+    margin-top: 30px;
+}
+
+.todo-item + .todo-item {
+    margin-top: 15px;
+}
+
+.todo-checkbox {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    margin: auto 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.todo-checkbox::after {
+    content: url("../img/uncheck.svg");
+}
+
+.todo-checkbox:checked::after {
+    content: url("../img/check.svg");
+}
+
+.todo-item label {
+    display: block;
+    padding: 10px 10px;
+    margin: auto 50px;
+    line-height: 30px;
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    text-align: left;
+    transition: color .35s;
+}
+
+.todo-checkbox:checked + label {
+    text-decoration: line-through;
+    font-style: oblique;
+    color: #d6d6d6;
+}
+
+.destroy {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    font-size: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    border: none;
+    color: #FFFFFF;
+    background: none;
+    transition: color .2s ease-out;
+    cursor: pointer;
+}
+
+/* todo footer */
+.todo-footer {
+    display: block;
+    position: relative;
+    margin: 30px auto;
+    padding: 5px;
+    width: 95%;
+    text-align: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.todo-count {
+    float: left;
+}
+
+.todo-count em {
+    font-style: normal;
+}
+
+.todo-filter {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.todo-filter li {
+    display: inline-block;
+
+}
+
+.todo-filter li a,
+.todo-filter li a:visited,
+.todo-filter li a:link {
+    margin: 3px;
+    padding: 3px 7px;
+    text-decoration: none;
+    color: #000000;
+    border: transparent solid 1px;
+}
+
+.todo-filter li a:hover {
+    border: #e4e4e4 solid 1px;
+    border-radius: 3px;
+}
+
+.todo-filter li a.selected {
+    border: #bebebe solid 1px;
+    border-radius: 3px;
+}
+
+.clear-completed {
+    position: relative;
+    float: right;
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.clear-completed:hover {
+    text-shadow: #a8a8a8 0 2px 2px;
+}
+
+/* extra information */
+.info{
+    margin: auto;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    color: #bebebe;
+}
+.info em{
+    font-style: normal;
+    font-weight: 300;
+}
