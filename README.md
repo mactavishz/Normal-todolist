@@ -10,7 +10,7 @@
 + Display by category
 
 ## Quick Start
-Open Todo.html in your browser
+Open index.html in your browser
 
 ## Question
 Free to contact me: _maczhancha@yahoo.com_
