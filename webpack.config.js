@@ -1,0 +1,40 @@
+/**
+ * Created by maczhanchao on 2017/3/25.
+ */
+let path = require("path");
+
+module.exports={
+    entry:"./index.js",
+    output:{
+        filename:"bundle.js",
+        path:path.resolve(__dirname,"dist")
+    },
+    module:{
+        rules:[
+            {
+                test:/\.js$/,
+                exclude:/node_modules/,
+                use:{
+                    loader:"babel-loader",
+                    options:{
+                        presets:["es2015"]
+                    }
+                }
+            },
+            {
+                test:/\.(png|jpg|gif|svg)$/,
+                use:{
+                    loader:"url-loader",
+                    options:{
+                        limit:8192,
+                        name:"[name].[ext]?[hash]",
+                    }
+                }
+            },
+            {
+                test:/\.css$/,
+                use:["style-loader","css-loader"]
+            }
+        ]
+    }
+}

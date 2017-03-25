@@ -1,9 +1,12 @@
 /* general style */
 body {
     background-color: #f8f8f8;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+*{
+    outline: none;
 }
 *:not(input) {
-    outline: none;
     moz-user-select: -moz-none;
     -moz-user-select: none;
     -o-user-select: none;
@@ -33,7 +36,6 @@ body {
 
 /* todo titile */
 .todo-title h1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     font-size: 80px;
     color: #bebebe;
@@ -53,7 +55,6 @@ body {
     border: none;
     box-shadow: #d6d6d6 0 5px 15px;
     font-size: 30px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     text-indent: 20px;
     padding: 0;
@@ -131,7 +132,6 @@ body {
     margin: auto 50px;
     line-height: 30px;
     font-size: 18px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     text-align: left;
     transition: color .35s;
@@ -150,7 +150,6 @@ body {
     bottom: 0;
     margin: auto 0;
     font-size: 15px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     border: none;
     color: #FFFFFF;
@@ -167,7 +166,6 @@ body {
     padding: 5px;
     width: 95%;
     text-align: left;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
 }
 
@@ -219,9 +217,9 @@ body {
     padding: 0;
     border: none;
     background: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     cursor: pointer;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
 
 .clear-completed:hover {
@@ -232,7 +230,6 @@ body {
 .info{
     margin: auto;
     text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     color: #bebebe;
 }

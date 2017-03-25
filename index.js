@@ -1,6 +1,8 @@
 /**
  * Created by maczhanchao on 2017/3/11.
  */
+import style from "./src/css/style.css"
+
 let todoDisplayArea = document.querySelector(".todo-display");
 let todoCountText = document.querySelector(".todo-count em");
 let todoItems = document.getElementsByClassName("todo-item");
