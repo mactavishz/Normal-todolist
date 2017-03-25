@@ -3,19 +3,19 @@
  */
 import style from "./src/css/style.css"
 
-let todoDisplayArea = document.querySelector(".todo-display");
-let todoCountText = document.querySelector(".todo-count em");
-let todoItems = document.getElementsByClassName("todo-item");
-let itemPluralText = document.querySelector(".todo-footer .plural");
-let undoneCounts = 0;
-const storageKey = "local-todo-list";
-const todoStatus = {
+var todoDisplayArea = document.querySelector(".todo-display");
+var todoCountText = document.querySelector(".todo-count em");
+var todoItems = document.getElementsByClassName("todo-item");
+var itemPluralText = document.querySelector(".todo-footer .plural");
+var undoneCounts = 0;
+var storageKey = "local-todo-list";
+var todoStatus = {
     completed: "completed",
     undone: "undone"
 };
-let todoStorage = {
+var todoStorage = {
     fetchAll: function () {
-        let todos = JSON.parse(localStorage.getItem(storageKey) || "[]");
+        var todos = JSON.parse(localStorage.getItem(storageKey) || "[]");
         todos.forEach(function (item, index) {
             item.id = index;
         });
@@ -40,13 +40,13 @@ function Todo(id, status, text) {
     this.text = text;
 }
 
-let todoTempStorage = todoStorage.fetchAll();
+var todoTempStorage = todoStorage.fetchAll();
 
 function createTodoItem(todo) {
-    let todoItem = document.createElement("div");
-    let checkBox = document.createElement("input");
-    let label = document.createElement("label");
-    let destroyBtn = document.createElement("button");
+    var todoItem = document.createElement("div");
+    var checkBox = document.createElement("input");
+    var label = document.createElement("label");
+    var destroyBtn = document.createElement("button");
 
     todoItem.className = "todo-item";
     todoItem.setAttribute("data-visibility", todo.status);
@@ -153,10 +153,10 @@ function createTodoItem(todo) {
 }
 
 window.addEventListener("load", function () {
-    let inputBox = document.querySelector("#new-todo");
-    let clearInputBtn = document.querySelector(".todo-input .clear-input");
-    let todoFilterBtn = document.querySelectorAll(".todo-filter li a");
-    let clearCompletedBtn = document.querySelector(".clear-completed");
+    var inputBox = document.querySelector("#new-todo");
+    var clearInputBtn = document.querySelector(".todo-input .clear-input");
+    var todoFilterBtn = document.querySelectorAll(".todo-filter li a");
+    var clearCompletedBtn = document.querySelector(".clear-completed");
 
     clearInputBtn.addEventListener("click", function (event) {
         inputBox.value = "";
@@ -174,7 +174,7 @@ window.addEventListener("load", function () {
 
     inputBox.addEventListener("keypress", function (event) {
         if (event.keyCode == 13) {
-            let todo = new Todo(todoTempStorage.length, todoStatus.undone, this.value);
+            var todo = new Todo(todoTempStorage.length, todoStatus.undone, this.value);
             todoTempStorage.push(todo);
             todoStorage.update(todoTempStorage);
             undoneCounts++;
@@ -193,7 +193,7 @@ window.addEventListener("load", function () {
                     item.className = "selected";
                     todoFilterBtn[1].className = "";
                     todoFilterBtn[2].className = "";
-                    for (let i = 0; i < todoItems.length; i++) {
+                    for (var i = 0; i < todoItems.length; i++) {
                         todoItems[i].style.display = "block";
                     }
                 }, false);
@@ -203,7 +203,7 @@ window.addEventListener("load", function () {
                     item.className = "selected";
                     todoFilterBtn[0].className = "";
                     todoFilterBtn[2].className = "";
-                    for (let i = 0; i < todoItems.length; i++) {
+                    for (var i = 0; i < todoItems.length; i++) {
                         if (todoItems[i].getAttribute("data-visibility") != todoStatus.completed) {
                             todoItems[i].style.display = "none";
                         } else {
@@ -217,7 +217,7 @@ window.addEventListener("load", function () {
                     item.className = "selected";
                     todoFilterBtn[0].className = "";
                     todoFilterBtn[1].className = "";
-                    for (let i = 0; i < todoItems.length; i++) {
+                    for (var i = 0; i < todoItems.length; i++) {
                         if (todoItems[i].getAttribute("data-visibility") != todoStatus.undone) {
                             todoItems[i].style.display = "none";
                         } else {
@@ -240,7 +240,7 @@ window.addEventListener("load", function () {
         todoDisplayArea.innerHTML = "";
     }, false);
 
-    for (let i = 0; i < todoTempStorage.length; i++) {
+    for (var i = 0; i < todoTempStorage.length; i++) {
         createTodoItem(todoTempStorage[i]);
         if (todoTempStorage[i].status == todoStatus.undone) {
             undoneCounts++;

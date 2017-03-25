@@ -1,12 +1,15 @@
 /* general style */
 body {
     background-color: #f8f8f8;
-    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
-*{
+
+* {
     outline: none;
 }
+
 *:not(input) {
+
     moz-user-select: -moz-none;
     -moz-user-select: none;
     -o-user-select: none;
@@ -219,7 +222,7 @@ body {
     background: none;
     font-weight: lighter;
     cursor: pointer;
-    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 
 .clear-completed:hover {
@@ -227,13 +230,14 @@ body {
 }
 
 /* extra information */
-.info{
+.info {
     margin: auto;
     text-align: center;
     font-weight: lighter;
     color: #bebebe;
 }
-.info em{
+
+.info em {
     font-style: normal;
     font-weight: 300;
 }
