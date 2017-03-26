@@ -1,6 +1,6 @@
-# A Simple Todo List
+# A Simple Todo List -- Vue.js Version
 >
-> Powered By HTML,CSS and Standard Javascript <br> Also made use of Normalize.css
+> Powered By HTML,CSS and Vue.js <br> Also made use of Normalize.css
 
 ## Features
 + Add todo item
@@ -10,8 +10,10 @@
 + Display by category
 
 ## Quick Start
-Open index.html in your browser
 
+npm install
+
+npm run dev
 ## Question
 Free to contact me: _maczhanchao@yahoo.com_
 
