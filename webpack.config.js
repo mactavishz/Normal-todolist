@@ -4,13 +4,18 @@
 let path = require("path");
 
 module.exports={
-    entry:"./index.js",
+    entry:"./src/main.js",
     output:{
-        filename:"bundle.js",
-        path:path.resolve(__dirname,"dist")
+        path:path.resolve(__dirname,"dist"),
+        publicPath:"/dist/",
+        filename:"bundle.js"
     },
     module:{
         rules:[
+            {
+                test:/\.vue$/,
+                use:["vue-loader"]
+            },
             {
                 test:/\.js$/,
                 exclude:/node_modules/,
@@ -36,5 +41,10 @@ module.exports={
                 use:["style-loader","css-loader"]
             }
         ]
+    },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.common.js'
+        }
     }
 }

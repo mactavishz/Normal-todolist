@@ -6,38 +6,12 @@
     <link rel="stylesheet" href="src/css/normalize.css">
 </head>
 <body>
-<div class="todo">
-    <div class="todo-title">
-        <h1>Todo List</h1>
-    </div>
-    <div class="todo-input">
-        <label for="new-todo"></label>
-        <input type="text" id="new-todo" maxLength="30">
-        <button class="clear-input"></button>
-    </div>
-    <div class="todo-display">
-        <!--todo item structure -->
-        <!--<div class="todo-item">-->
-        <!--<input type="checkbox" class="todo-checkbox">-->
-        <!--<label>100个俯卧撑</label>-->
-        <!--<button class="destroy">X</button>-->
-        <!--</div>-->
-    </div>
-    <footer class="todo-footer clearfix">
-        <span class="todo-count"><em>0</em> item<em class="plural"></em> left</span>
-        <ul class="todo-filter">
-            <li><a href="#/all" class="selected">All</a></li>
-            <li><a href="#/completed">Completed</a></li>
-            <li><a href="#/undone">Undone</a></li>
-        </ul>
-        <button class="clear-completed">Clear completed</button>
-    </footer>
-</div>
+<div id="app"></div>
 <footer class="info">
     <p>Press enter to start</p>
     <p>Written by <em>Mactavish</em></p>
     <p>Powered by standard Javascript</p>
 </footer>
-<script src="dist/bundle.js"></script>
+<script src="./dist/bundle.js"></script>
 </body>
 </html>

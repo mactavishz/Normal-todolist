@@ -75,8 +75,6 @@ body {
     padding: 0;
     outline: none;
     cursor: pointer;
-    opacity: 0;
-    transition: opacity .5s ease-in;
 }
 
 .clear-input:active {
@@ -98,7 +96,7 @@ body {
     height: 50px;
     border-radius: 6px;
     border-right: #1E90FF 5px solid;
-    transition: border-color .35s, opacity .5s;
+    transition: border-color .35s;
     box-shadow: #d6d6d6 0 5px 15px;
 }
 
@@ -134,6 +132,7 @@ body {
     padding: 10px 10px;
     margin: auto 50px;
     line-height: 30px;
+    color: #000;
     font-size: 18px;
     font-weight: lighter;
     text-align: left;
@@ -146,19 +145,27 @@ body {
     color: #d6d6d6;
 }
 
-.destroy {
+.todo-item .destroy {
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto 0;
+    opacity: 0;
+    color: #000;
     font-size: 15px;
     font-weight: lighter;
     border: none;
-    color: #FFFFFF;
     background: none;
-    transition: color .2s ease-out;
+    transition: all .2s ease-out;
     cursor: pointer;
+}
+.todo-item:hover .destroy{
+    opacity: 1;
+}
+
+.todo-item .destroy:hover {
+    color: #95200d
 }
 
 /* todo footer */
